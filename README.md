@@ -1,0 +1,41 @@
+# mammogram mass detection
+<div> 
+This project focuses on detecting the mass for mammogram based on Mask RCNN models using CBIS-DDSM dataset. Considering the small size of dataset, we preprocess it carefully and generate clean data using opencv and scikit. Finally, we use Mask-RCNN pretrained on balloon dataset to train based on detectron2.
+</div>
+
+## preprocess 
+The preprocess includes removing artifact, removing pectoral and adding black border based on opencv and scikit. Some outcomes are showed below. (The figures of outcome)
+
+<details>
+  <summary>methods</summary>
+  
+  1. cv2.equalizeHist()
+  2. skimage.feature.canny()
+  3. cv2.morphologyEx()
+  4. skimage.filter.sobel()
+</details>
+
+<details>
+  <summary>procedures</summary>
+  1. remove_artifact: image —> gray image —> (cv2.THRESH_OTSU) thresh —>  (cv2.MORPH_CLOSE, cv2.MORPH_OPEN, cv2.MORPH_DILATE,cv2.morphologyEx) morph —> (get_largest_area)mask —> remove artifact
+  2. remove_pectoral
+  3. add_border_denoise
+</details>
+
+<details>
+  <summary>Usage</summary>
+  1. remove_artifact: image —> gray image —> (cv2.THRESH_OTSU) thresh —>  (cv2.MORPH_CLOSE, cv2.MORPH_OPEN, cv2.MORPH_DILATE,cv2.morphologyEx) morph —> (get_largest_area)mask —> remove artifact
+  2. remove_pectoral
+  3. add_border_denoise
+</details>
+
+
+## train
+
+## other
+If you like it, please star it.❤️
+
+## references
+
+
+
