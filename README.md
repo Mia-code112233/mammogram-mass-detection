@@ -1,6 +1,6 @@
 # mammogram mass detection
 <div> 
-This project focuses on detecting the mass for mammogram based on Mask RCNN models using part of CBIS-DDSM dataset. Considering the small size of dataset, we preprocess it carefully and generate clean data using opencv and scikit. Finally, we use Mask-RCNN pretrained on balloon dataset to train based on detectron2.😄
+This project focuses on detecting the mass for mammogram based on Mask RCNN models using part of CBIS-DDSM dataset. Considering the small size of dataset, we preprocess it carefully and generate clean data using opencv and scikit. Finally, we use Mask-RCNN pretrained on ImageNet dataset to train based on detectron2.😄
 </div>
 
 ## preprocess 
@@ -62,7 +62,7 @@ after hough line detection    |  after selecting
 <details>
   <summary>test results</summary>
     <figure>
-    <img src="https://github.com/Mia-code112233/mammogram-mass-detection/blob/master/preprocess/preprocess_test_result/preprocess_test2/lines.jpg" alt="algorithm-screenshot"/ height="100" border="5">
+    <img src="https://github.com/Mia-code112233/mammogram-mass-detection/blob/master/train/result/preprocess/result_table.png" alt="algorithm-screenshot"/ height="100" border="5">
   </figure>
 </details>
 
