@@ -17,16 +17,20 @@ The preprocess includes removing artifact, removing pectoral and adding black bo
 
 <details>
   <summary>procedures</summary>
-  1. remove_artifact: image —> gray image —> (cv2.THRESH_OTSU) thresh —>  (cv2.MORPH_CLOSE, cv2.MORPH_OPEN, cv2.MORPH_DILATE,cv2.morphologyEx) morph —> (get_largest_area)mask —> remove artifact
-  2. remove_pectoral
+  1. remove_artifact: image —> gray image —> (cv2.THRESH_OTSU) thresh —>  (cv2.MORPH_CLOSE, cv2.MORPH_OPEN, cv2.MORPH_DILATE,cv2.morphologyEx) morph —> (get_largest_area)mask —> remove artifact <br />
+  2. remove_pectoral: image removed artifact —> orient —> equalHist —> canny detection —> sobel —> morphological operation —> canny edge detection <br />
   3. add_border_denoise
 </details>
 
 <details>
-  <summary>Usage</summary>
-  1. remove_artifact: image —> gray image —> (cv2.THRESH_OTSU) thresh —>  (cv2.MORPH_CLOSE, cv2.MORPH_OPEN, cv2.MORPH_DILATE,cv2.morphologyEx) morph —> (get_largest_area)mask —> remove artifact
-  2. remove_pectoral
-  3. add_border_denoise
+  <summary>usage</summary>
+  1. adjust your directory like this: <br />
+  |--CBIS-DDSM <br />
+  |&emsp  |--mass_train <br />
+  |&emsp &emsp    |--mass_train <br />
+  | &emsp  |--mass_test <br />
+  |  &emsp &emsp   |--mass_test<br />
+  2. adjust the original directory of CBIS-DDSM and run it
 </details>
 
 
