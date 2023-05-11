@@ -1,0 +1,51 @@
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+[01/16 03:24:58 d2.evaluation.fast_eval_api]: Evaluate annotation type *bbox*
+[01/16 03:24:58 d2.evaluation.fast_eval_api]: COCOeval_opt.evaluate() finished in 0.04 seconds.
+[01/16 03:24:58 d2.evaluation.fast_eval_api]: Accumulating evaluation results...
+[01/16 03:24:58 d2.evaluation.fast_eval_api]: COCOeval_opt.accumulate() finished in 0.01 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.092
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.224
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.057
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.093
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.127
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.135
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.135
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.136
+[01/16 03:24:58 d2.evaluation.coco_evaluation]: Evaluation results for bbox: 
+|  AP   |  AP50  |  AP75  |  APs  |  APm  |  APl  |
+|:-----:|:------:|:------:|:-----:|:-----:|:-----:|
+| 9.181 | 22.395 | 5.684  |  nan  | 0.000 | 9.341 |
+[01/16 03:24:58 d2.evaluation.coco_evaluation]: Some metrics cannot be computed and is shown as NaN.
+Loading and preparing results...
+DONE (t=0.01s)
+creating index...
+index created!
+[01/16 03:24:58 d2.evaluation.fast_eval_api]: Evaluate annotation type *segm*
+[01/16 03:24:58 d2.evaluation.fast_eval_api]: COCOeval_opt.evaluate() finished in 0.09 seconds.
+[01/16 03:24:58 d2.evaluation.fast_eval_api]: Accumulating evaluation results...
+[01/16 03:24:58 d2.evaluation.fast_eval_api]: COCOeval_opt.accumulate() finished in 0.00 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.106
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.210
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.088
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.106
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.136
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.144
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.144
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.145
+[01/16 03:24:58 d2.evaluation.coco_evaluation]: Evaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs  |  APm  |  APl   |
+|:------:|:------:|:------:|:-----:|:-----:|:------:|
+| 10.560 | 21.027 | 8.831  |  nan  | 0.000 | 10.649 |
+[01/16 03:24:58 d2.evaluation.coco_evaluation]: Some metrics cannot be computed and is shown as NaN.
+OrderedDict([('bbox', {'AP': 9.180761499228964, 'AP50': 22.39469882536456, 'AP75': 5.684434517039264, 'APs': nan, 'APm': 0.0, 'APl': 9.341447794297677}), ('segm', {'AP': 10.560091433715142, 'AP50': 21.026895258770907, 'AP75': 8.830972405918578, 'APs': nan, 'APm': 0.0, 'APl': 10.648612856487484})])

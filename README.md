@@ -78,6 +78,9 @@ after hough line detection    |  after selecting
 
 ## references
 1. https://github.com/gsunit/Pectoral-Muscle-Removal-From-Mammograms
+2. https://arxiv.org/pdf/1703.06870v3.pdf
+3. https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md
+
 
 
 

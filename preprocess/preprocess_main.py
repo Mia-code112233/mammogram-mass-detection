@@ -1,6 +1,6 @@
-#@title full preprocess procedure
-# this file is for getting the experiment data
-from image_process import *
+#@title preprocess_main
+# this file is for getting the clean data
+from preprocess.image_process import *
 from google.colab.patches import cv2_imshow
 import skimage
 import os
@@ -35,7 +35,6 @@ def get_better_canny(removed_artifact, dst_dir):
   canny_morph_sobel_canny_equ = apply_canny(morph_sobel_canny_equ)
   return canny_morph_sobel_canny_equ, orient_flag
 
-#mask_pectoral: use mask to remove pectoral muscle
 def mask_pectoral(canny_morph_sobel_canny_equ, orient_flag, dst_dir):
   lines = get_hough_lines(canny_morph_sobel_canny_equ)
   pectoral = io.imread(os.path.join(dst_dir, "artifact.jpg"))
@@ -55,7 +54,6 @@ def mask_pectoral(canny_morph_sobel_canny_equ, orient_flag, dst_dir):
     pectoral = apply_flip(pectoral)
   io.imsave(os.path.join(dst_dir, "pectoral.jpg"), pectoral)
 
-#add_border_denoise: adding black border to denoise
 def add_border_denoise(filename, width = 400):
   border = cv2.imread(filename)
   border = add_border(border, width = 400)
@@ -94,7 +92,7 @@ def clean_temp_files(dst_dir):
 import glob
 import os
 
-show_step = 5
+show_step = 1
 
 # read all jpg file
 root_dir = '/content/drive/MyDrive/graduation_project/dataset/CBIS_DDSM/mass_train'
@@ -108,7 +106,43 @@ if not os.path.exists(dst_dir):
 
 #begin to preprocess
 file_cnt = 0
+
+#cuddly test
+'''
+print('cuddly test the order')
+i = 0
+while i < 10:
+  print(images_list[i])
+  i += 1
+print(images_list[-1])
+print(images_list[-2])
+print(images_list[-3])
+print('cuddly test the order end')
+
+for i in range(0, 3):
+  print("i: ", i)
+'''
+
+
+
+'''
+original code:
 for filename in images_list:
+  if( filename[-5]=='O' ):
+    preprocess_mlo_file(filename, src_dir, dst_dir)
+  if( filename[-5]=='C' ):
+    preprocess_cc_file(filename, src_dir, dst_dir)
+  file_cnt += 1
+  if( file_cnt % show_step == 0):
+    print("The amount of files processed is {}/{}".format(file_cnt, len(images_list)))
+clean_temp_files(dst_dir)
+print('The amount of files processed is ', file_cnt)
+'''
+
+
+#cuddly new code:
+for i in range(650, 1250):
+  filename = images_list[i]
   if( filename[-5]=='O' ):
     preprocess_mlo_file(filename, src_dir, dst_dir)
   if( filename[-5]=='C' ):
@@ -121,7 +155,7 @@ print('The amount of files processed is ', file_cnt)
 
 
 '''
-somehting to improve:
+something to improve:
 1, write to argv
 
 problem:
