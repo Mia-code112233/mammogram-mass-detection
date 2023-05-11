@@ -33,6 +33,12 @@ The preprocess includes removing artifact, removing pectoral and adding black bo
   2. adjust the original directory of CBIS-DDSM and run it
 </details>
 
+### preprocess test
+Here are some test results and if you want to see more, you can read from the direcotry of /preprocess/preprocess_test_result
+original figure     -->  after thresholding and morph  -->  after removing artifact
+<figure>
+  <img src="https://github.com/Mia-code112233/mammogram-mass-detection/blob/master/preprocess/preprocess_test_result/preprocess_test2/test2_MLO.jpg" alt="algorithm-screenshot"/ height="100" border="5">
+</figure>
 
 ## train
 
