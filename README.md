@@ -73,7 +73,8 @@ after hough line detection    |  after selecting
 
 
 ## other
-If you like it, please star it.❤️
+1. I would appreciate it very much if you could give me a star.❤️
+2. Improvements are encouraged and I am expected to that.🌈
 
 ## references
 1. https://github.com/gsunit/Pectoral-Muscle-Removal-From-Mammograms
