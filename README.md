@@ -36,9 +36,9 @@ The preprocess includes removing artifact, removing pectoral and adding black bo
 ### preprocess test
 Here are some test results and if you want to see more, you can read from the direcotry of /preprocess/preprocess_test_result
 original figure     -->  after thresholding and morph  -->  after removing artifact
-<figure>
-  <img src="https://github.com/Mia-code112233/mammogram-mass-detection/blob/master/preprocess/preprocess_test_result/preprocess_test2/test2_MLO.jpg" alt="algorithm-screenshot"/ height="100" border="5">
-</figure>
+original figure            |  after thresholding and morph | after removing artifact
+:-------------------------:|:-------------------------:
+| ![image1](https://github.com/Mia-code112233/mammogram-mass-detection/blob/master/preprocess/preprocess_test_result/preprocess_test2/test2_MLO.jpg) | ![image2](/path/to/image2.jpg](https://github.com/Mia-code112233/mammogram-mass-detection/blob/master/preprocess/preprocess_test_result/preprocess_test2/artifact_morph.jpg) | ![image1](https://github.com/Mia-code112233/mammogram-mass-detection/blob/master/preprocess/preprocess_test_result/preprocess_test2/artifact.jpg)
 
 ## train
 
