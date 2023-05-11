@@ -59,6 +59,18 @@ after hough line detection    |  after selecting
   2. run the code <br />
 </details>
 
+<details>
+  <summary>test results</summary>
+    <figure>
+    <img src="https://github.com/Mia-code112233/mammogram-mass-detection/blob/master/preprocess/preprocess_test_result/preprocess_test2/lines.jpg" alt="algorithm-screenshot"/ height="100" border="5">
+  </figure>
+</details>
+
+## something to improve
+1. CBIS-DDSM is not completely used and this experiment just use about 1200 mass train dataset and about 360 mass test datasets.
+2. The quality of medical images are not stable so some pictures can not be preprocessed well while some others can.
+3. The procedure of preprocessing also generates noise of images which can be seen obviously through artifact_mask.jpg
+
 
 ## other
 If you like it, please star it.❤️
